@@ -1,0 +1,5 @@
+{
+    "name": "Nikolaj",
+    "age": 26,
+    "parents": [{"name": "Name1"}, {"name": "Name2"}]
+}
