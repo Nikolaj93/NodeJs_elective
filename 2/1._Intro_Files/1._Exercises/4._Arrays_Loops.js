@@ -55,3 +55,33 @@ diet.pop();
 console.log(diet);
 
 // --------------------------------------
+// --------------------------------------
+// Exercise 6 - Copy array
+
+// You really like your daily diet from last exercise. Copy it to a new array called dinnerTray so you can give it to a friend.  
+var dinnerTray = diet;
+console.log(dinnerTray);
+// --------------------------------------
+
+// --------------------------------------
+// Exercise 7 - For loop
+
+var letters = ["a","b","c", "d", "e", "f", "g", "h"];
+
+// log every second char in the array starting from b
+for (var index = 1; index < letters.length; index++) {
+    if (i % 2) {
+        console.log(letters);
+    }  
+}
+// --------------------------------------
+// Exercise 8 - For loop and if statement
+
+var numbers  = [5, 3, 2, 7, 11, 12, 0, -20, 6];
+
+var discardedNumbers = [];
+
+// log the element if the number is above 6 or below 0
+// else push them to the array discardedNumbers
+
+// --------------------------------------
