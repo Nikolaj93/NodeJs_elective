@@ -69,10 +69,8 @@ console.log(dinnerTray);
 var letters = ["a","b","c", "d", "e", "f", "g", "h"];
 
 // log every second char in the array starting from b
-for (var index = 1; index < letters.length; index++) {
-    if (i % 2) {
-        console.log(letters);
-    }  
+for (var i = 1; i < letters.length; i += 2) {
+    console.log(letters[i]);
 }
 // --------------------------------------
 // Exercise 8 - For loop and if statement
@@ -83,5 +81,9 @@ var discardedNumbers = [];
 
 // log the element if the number is above 6 or below 0
 // else push them to the array discardedNumbers
-
+for(var i = 0; i < numbers.length; i++) {
+    if(numbers < 0 || numbers[i]);
+else {
+    discardedNumbers.push(numbers[i]);
+}}
 // --------------------------------------
