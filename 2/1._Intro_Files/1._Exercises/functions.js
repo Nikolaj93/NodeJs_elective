@@ -8,8 +8,7 @@ console.log(addition(2,6));
 /* a scope in javascript is inside of 
 {
 
-}
-*/
+}*/
 
 function introduce() {
     console.log("nice to meet you!");
@@ -66,7 +65,7 @@ const callingLater = (calling, name) => {
 callingLater(calling, name);
 
 function lastThing() {
-    function thisIsPossibleInJavascript() => {
+    function thisIsPossibleInJavascript() {
         console.log("A OK");
     }
     thisIsPossibleInJavascript();
