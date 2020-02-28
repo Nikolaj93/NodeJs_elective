@@ -15,4 +15,9 @@ app.get("/", (req, res) => {
     res.send(response);
 });
 
-app.listen(3000);
+app.listen(3000, error => {
+    if (error) {
+        console.log("Error running the server", error);
+    }
+    console.log("Server is running on port", 3000);
+});
