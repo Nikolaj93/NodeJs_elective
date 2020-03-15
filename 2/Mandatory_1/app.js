@@ -1,5 +1,6 @@
-const app = require("express")();
-const PORT = 3000;
+const express = require("express")();
+const app = express();
+const port = 3000;
 
 let cars = [
     Car1 = {id: 1, brand: "Ferrari", Engine: "V8", Price: "RIP money..."},
@@ -20,7 +21,7 @@ app.get("/cars/:id", (req, res) => {
     return res.send({car: car});
 });
 
-const server = app.listen(3000, (error) => {
+const server = app.listen(port, (error) => {
     if (error) {
         console.log("Error running the server", error);
     }
