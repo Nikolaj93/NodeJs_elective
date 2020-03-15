@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../css/stylesheet.css">
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="../index/index.html">Frontpage</a>
+		<a href="../commandline/commandline.html">Commandline</a>
+        <a href="../javascript/javascript.html">JavaScript</a>
+		<a href="../json/json.html">JSON</a>
+		<a href="../restapi/restapi.html">REST API</a>
+        <a href="#">New stuff</a>
+      </div>
+      
+      <!-- Use any element to open the sidenav -->
+      <span class="mySidenav" onclick="openNav()">☰ Menu</span>   
+
+	<div class="first-list reason">List of reasons</div>
+
+	<ol id="first-list">
+		<li class="reason">Reason 1</li>
+		<li>Reason 2</li>
+		<li>Reason 3</li>
+	</ol>
+
+	<ul id="list" class="second-list">
+      <h4>Here are additional reasons</h4>
+      <span>This label gives a description</span>
+      <li>An unordered list.</li>
+      <li>Each point is automatically rendered with a dot in front of it.</li>
+      <li>If you are reading this and know what the prefacing dot is called then randomly shout it out loud.</li>
+	</ul>
+
+	<div class="unused-box">
+		<label>Temporary text label</label>
+	</div>
+
+	<div class="button-group">
+		<p>Action center</p>
+		<button id="submit-button">
+			Click
+		</button>
+	</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./javascript.js"></script>
+    
+      
+      <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+      <div id="main">
+        ...
+      </div>
+
+    
+</body>
+</html>
