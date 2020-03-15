@@ -27,8 +27,8 @@ app.get("/commandline", (req, res) => {
     return res.sendFile(path.join(__dirname + "/public/commandline/commandline.html"));
 });
 
-app.get("/json", (req, res) => {
-    return res.sendFile(__dirname + "/public/json/json.html");
+app.get("/tools", (req, res) => {
+    return res.sendFile(__dirname + "/public/tools/tools.html");
 });
 
 app.get("/javascript", (req, res) => {

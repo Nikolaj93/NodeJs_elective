@@ -12,7 +12,7 @@
 		<a href="/index">Frontpage</a>
 		<a href="/commandline">Commandline</a>
         <a href="/javascript">JavaScript</a>
-		<a href="/json">JSON</a>
+		<a href="/tools">Tools</a>
 		<a href="/restapi">REST API</a>
         <a href="#">New stuff</a>
       </div>
@@ -20,31 +20,16 @@
 <!-- Use any element to open the sidenav -->
 <span class="mySidenav" onclick="openNav()">☰ Menu</span> 
 
-    <!-- <div class="background-image"></div> -->
-    <div class="box">
-        <p style="margin-top: 0;"><b>Navigation in Commandline</b><br>
-            When I am navigating my folders and accessing different files we use commands such as 'cd' 'ls'.
-            'cd' for navigating folders and 'ls' for seeing a list of current files of the folder that I am in.<br><br>
-            <b>NPM</b><br>
-            NPM stands for Node Package Manager and that means that you have to install NodeJS to take advantage of NPM.
-            NPM is a package manager and lets developers download different packages for different usages.
-            Packages are defined in a package.json file and are written in JSON. Here is an example of a package (that is defined in package.json) and one that I use to serve my HTML pages:<br><br>
-            <img src="../../images/PackageCode.PNG"><br>
-            To install packages with NPM you use: "npm install 'what package to install'. 
-            If I want to install Express I would type: "npm install express" in commandline.
-            Before I would enter that command, I'd like to create a package.json in my project folder. Herein, I manage my packages amongst other things.
-            Packages can be installed globally for all projects as well as just for this project.<br><br>
-            <b>Express</b><br>
-            Express is a very lightweight package and, in their own words, features robust routing and focuses on high performance. It enables me to use HTTP methods such as GET, POST, PUT and DELETE.
-            Here is an exaple of Express in use:<br>
-            <img src="../../images/ExpressCode.PNG"><br>
-            Line 1: Load the module Express from node_modules.<br>
-            Line 2: Instantiate an object of Express.<br>
-            Line 4: We create a GET route for when a client requests the page "/" and then we, the server, responds with serving a frontpage.html file to the client.<br><br>
-            <b>Nodemon</b><br>
-            Nodemon is another package that helps us develop node.js based applications in a more convenient way. Once installed, instead of using 'node app.js' we can use 'nodemon app.js'.
-            Nodemon automatically restarts the application, once it detects a change in the files of our project.<br>
-        </p>
+    <div class="page-content">
+        <p style="font-weight: 800; font-size: 1.3em; padding-top: 20px;">Navigation in command line:</p>
+        <p>When I am navigating my folders and accessing different files we use commands such as 'cd' & 'ls'.</p> 
+        <p>'cd' for changing directory and 'ls'(list files), for seeing a list of files in the current folder.</p>
+        <p style="font-weight: 800; font-size: 1.3em; padding-top: 20px;">NPM:</p>
+        <p>NPM stands for Node Package Manager and that means that you have to install NodeJS to take advantage of NPM.</p>
+        <p>NPM is a package manager and lets developers download different packages for different usages.</p>
+        <p>Packages are defined in a package.json file and are written in JSON.</p>
+        <p>To install packages with NPM you use: "npm install 'what package to install'.</p> 
+        <p>If I want to install Express I would type: "npm install express" in command line.</p>   
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="/public/commandline/commandline.js"></script>

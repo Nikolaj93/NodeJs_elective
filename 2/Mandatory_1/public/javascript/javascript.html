@@ -13,7 +13,7 @@
 		<a href="/index">Frontpage</a>
 		<a href="/commandline">Commandline</a>
         <a href="/javascript">JavaScript</a>
-		<a href="/json">JSON</a>
+		<a href="/tools">Tools</a>
 		<a href="/restapi">REST API</a>
         <a href="#">New stuff</a>
       </div>
@@ -21,42 +21,39 @@
       <!-- Use any element to open the sidenav -->
       <span class="mySidenav" onclick="openNav()">☰ Menu</span>   
 
-	<div class="first-list reason">List of reasons</div>
-
-	<ol id="first-list">
-		<li class="reason">Reason 1</li>
-		<li>Reason 2</li>
-		<li>Reason 3</li>
-	</ol>
-
-	<ul id="list" class="second-list">
-      <h4>Here are additional reasons</h4>
-      <span>This label gives a description</span>
-      <li>An unordered list.</li>
-      <li>Each point is automatically rendered with a dot in front of it.</li>
-      <li>If you are reading this and know what the prefacing dot is called then randomly shout it out loud.</li>
-	</ul>
-
-	<div class="unused-box">
-		<label>Temporary text label</label>
-	</div>
-
-	<div class="button-group">
-		<p>Action center</p>
-		<button id="submit-button">
-			Click
-		</button>
-	</div>
-
+        <div class="page-content">
+            <p style="font-weight: 800; font-size: 1.3em; padding-top: 20px;">JavaScript:</p>
+            <div class="box">
+                <div id="box-type-coercion">
+                    <b>Type coercion</b><br>
+                    <button id="box-type-coercion-before">Complete text before paragraph</button>
+                    <p>Type coercion is the process of converting a certain value to another, for instance a Number to String. It can also lead to great frustration when JavaScript implicitly handles something in a way that was not meant to be.</p>
+                    <button id="box-type-coercion-after">Complete text after paragraph</button>
+                </div>
+            
+                <div id="box-asi">
+                    This text should be about ASI, but it's really small!<br>Try to click this header to change the text size.
+                    As we know from Java, using semicolon is a necessity when trying to run code.
+                        Your code simply won't compile when missing a semicolon. JavaScript has a fix for this and that is Automatic Semicolon Insertion. 
+                        It automatically inserts semicolon when particular statements should be terminated by a semicolon
+                        and it means that when typing JS code, semicolons are optional right?
+                        Wrong. There are examples of where ASI tries to correct your code by inserting a semicolon, when you should've just had a syntax error.
+                        When I'm writing JS, I will consequently use semicolon everywhere it's appropriate.
+                    </p>
+                </div>
+        
+                <div id="box-arrow-functions">
+                    <b>Arrow functions</b><br>
+                    <button>Hover over this button to read about arrow functions.</button>
+                    <p style="display: none;">In the beginning of our NodeJS course, we used regular functions to execute some particular code but we quickly changed to use arrow functions instead.
+                        There's a specific reason as to why we made the change, but I quite like the look of a arrow function and I think it provides some readibility.
+                        There are also some negatives to arrow functions in that it is syntactically anonymous, meaning that arrow functions are not named and that can make it harder to debug to some degree. There's no self referencing either.
+                        The main upside and the reason why our course made the switch is because there is no binding of 'this'. In classic functions, 'this' is contextually bound while in arrow functions 'this' is bound to the code that contains the arrow function.
+                    </p>
+                </div>
+            </div>              
+        </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="/public/javascript/javascript.js"></script>
-    
-      
-      <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
-      <div id="main">
-        ...
-      </div>
-
-    
+    <script src="/public/javascript/javascript.js"></script>   
 </body>
 </html>
