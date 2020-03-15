@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../CSS/MyCSS.css">
+    <title>REST API</title>
+</head>
+<body>
+    <h1>REST API</h1>
+    <ul>
+        <li><a href="../">Home</a></li>
+        <li><a href="theory">Theory</a></li>
+        <li><a href="commands">NPM and Commands</a></li>
+        <li><a href="javascript">JavaScript with jQuery</a></li>
+        <li><a class="active" href="restapi">REST API</a></li>
+    </ul>
+    <div class="box" style="width: 500px;">
+        <b>REST API</b><br><br>
+        When creating a RESTFUL web service, there are certain things it should contain and one of the things is HTTP methods.
+        Methods such as GET, POST, PUT and DELETE. When you meet a RESTFUL web service, you can expect it to have these capabilities. Also called CRUD operations.
+        Let's say that we have a website where a server contains users of some sort. We should expect that when we try to issue a GET request to /user/ that the server returns a list all registered users.
+        When we issue a GET request for /user/3, the server should return the user details of user number 3. If we issue a DELETE request with /user/3 the server should delete user 3.<br><br>
+        <b>Postman</b><br>
+        Postman is an application that helps developers develop better API's through a simplified user interface. 
+        You could to some degree interact with a RESTFUL API through the URL alone, but is unecessarily hard. Interacting with the API through Postman makes life a lot easier.<br><br>
+        To demonstrate some REST API usages, I've created several URL's to retrieve ressources of students following the localhost:/port/restapi/collection. It's possible to use the CRUD operations, namely create (POST), read (GET), update (PUT) and delete.
+        I've hardcoded some students into an array to provide with some initial data.
+    </div>
+</body>
+</html>
