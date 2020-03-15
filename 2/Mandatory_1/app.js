@@ -1,10 +1,18 @@
-const express = require("express")();
+const path = require('path');
+const express = require('express')
 const app = express();
-const port = 3000;
+//const port = 3000;
 
-app.use(express.static('public'));
-app.use(express.static('css'));
-app.use(express.static('images'));
+app.use('/public/', express.static('./public/'));
+app.use('/css/', express.static('./css/'));
+app.use('/images/', express.static('./images/'));
+
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
+
+const port = process.env.PORT ? process.env.PORT : 3000;
+
+console.log("env port: ", process.env.PORT)
 
 let cars = [
     Car1 = {id: 1, brand: "Ferrari", Engine: "V8", Price: "RIP money..."},
@@ -12,11 +20,11 @@ let cars = [
 ];
 
 app.get("/", (req, res) => {
-    return res.sendFile(__dirname + "/public/index/index.html");
+    return res.sendFile(path.join(__dirname + "/public/index/index.html"));
 });
 
 app.get("/commandline", (req, res) => {
-    return res.sendFile(__dirname + "/public/commandline/commandline.html");
+    return res.sendFile(path.join(__dirname + "/public/commandline/commandline.html"));
 });
 
 app.get("/json", (req, res) => {
