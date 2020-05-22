@@ -11,14 +11,24 @@ app.use(express.static('public'));
 app.use(express.static('videos'));
 
 // SSR - Server side rendering
+// here: load the navbar and console.log it
+// note: 'fs' mean 'filesystem'
+const fs = require('fs');
+
+const navbarPage = fs.readFileSync("public/navbar/navbar.html", "utf8");
+const footerPage = fs.readFileSync("public/footer/footer.html", "utf8");
+
+const frontpagePage = fs.readFileSync("public/frontpage/frontpage.html", "utf8");
+const playerPage = fs.readFileSync("public/player/player.html", "utf8");
 
 app.get("/", (req, res) => {
-    return res.sendFile(__dirname + "/public/frontpage/frontpage.html");
+    return res.send(navbarPage + frontpagePage + footerPage);
 });
 
 app.get("/player/:videoid", (req, res) => {
-    return res.sendFile(__dirname + "/public/player/player.html");
+    return res.send(navbarPage + playerPage + footerPage);
 });
+
 
 const port = process.env.PORT ? process.env.PORT : 3000;
 
