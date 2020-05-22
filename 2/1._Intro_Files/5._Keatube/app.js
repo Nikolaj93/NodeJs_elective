@@ -10,6 +10,8 @@ app.use(express.json());
 app.use(express.static('public'));
 app.use(express.static('videos'));
 
+// SSR - Server side rendering
+
 app.get("/", (req, res) => {
     return res.sendFile(__dirname + "/public/frontpage/frontpage.html");
 });
