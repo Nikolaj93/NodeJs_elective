@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Signup</title>
+		<link href='https://fonts.googleapis.com/css?family=Montserrat:400' rel='stylesheet'>
+		<style>
+		body{
+			background-image: linear-gradient(to right, rgb(255, 155, 97) , rgb(255, 73, 158));
+		}
+		.login-form {
+			width: 300px;
+			margin: 0 auto;
+			font-family: 'Montserrat';
+		}
+		.login-form h1 {
+			text-align: center;
+			color: #4d4d4d;
+			font-size: 1.4em;
+			padding: 20px 0 20px 0;
+		}
+		.login-form input[type="password"],
+		.login-form input[type="text"], 
+		.login-form input[type="email"] {
+			width: 100%;
+			padding: 15px;
+			border: 1px solid #dddddd;
+			margin-bottom: 15px;
+			box-sizing:border-box;
+		}
+
+		.login-form img{
+			height: 100px;
+			text-align: center;
+			padding-left: 100px;
+			transition: 0.3s;
+
+		}
+		.login-form img:hover{
+			text-align: center;
+			padding-left: 75px;
+			height: 150px;
+		}
+
+		
+		.login-form #role-selector {
+			font-size: 1.2em;
+			width: 100%;
+			padding: 15px;
+			border: 1px solid #dddddd;
+			margin-bottom: 15px;
+			box-sizing:border-box;
+		}
+
+		
+		.login-form button[type="submit"] {
+			width: 100%;
+			padding: 15px;
+			background-color: #535b63;
+			border: 0;
+			box-sizing: border-box;
+			cursor: pointer;
+			font-weight: bold;
+			color: #ffffff;
+			transition: 0.3s;
+		}
+
+		.login-form button:hover[type="submit"] {
+			background-color: rgb(250, 143, 56);
+			font-size: 0.9em;
+		}
+
+        #signupAlert{
+            color: green;
+        }
+
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="login-form">
+			<img src="/images/logo.png" alt="" >
+			<h1>Create a profile</h1>
+			<form action="/signup" method="POST">
+				<input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+				<input type="password" name="repeatPassword" placeholder="Repeat password" required>
+				<input type="email" name="email" placeholder="email" required>
+				<p>Choose authorization level:</p>
+				<select id="role-selector" name="role">
+					<option value=1>Admin</option>
+					<option value=2>User</option>
+					<option value=3 selected="selected">Anonumous</option>
+				</select>
+                <button type="submit">Create profile</button>
+                
+                <div class="alert alert-success" role="alert" id="signupAlert">
+					<p id="message" style="text-align: center;"></p>
+					<p style="border-bottom: 1px solid black; font-size: 1.2em; text-align: center; color: black;" id="countDown"></p>
+                </div>
+			</form>
+        </div>
+        
+        <script>
+			var countDown = 3
+            $('#signupAlert').hide();
+            const urlParams = new URLSearchParams(window.location.search);
+            const urlParam = urlParams.get('status');
+            if(urlParam == "user_created") {
+				window.setInterval(function(){
+                $('#countDown').empty();
+				$('#countDown').append('Returning to login in: ' + countDown)
+				countDown -=1
+            	}, 1000);
+				$('#message').text("User has been created!");
+				
+				setTimeout(function(){ window.location.replace("/login"); }, 4000);
+				
+                $('#signupAlert').show();
+            } else if (urlParam == "missing_requirements") {
+                $('#message').text("Password must be more than 8 characters long")
+                $('#signupAlert').show();
+                $('#message').css("color", "red")
+            } else if (urlParam == "user_exists") {
+                $('#message').text("A user with that username already exists")
+                $('#signupAlert').show();
+                $('#message').css("color", "red")
+            } else if (urlParam == "mismatch_password") {
+                $('#message').text("Password and repeat password does not match")
+                $('#signupAlert').show();
+                $('#message').css("color", "red")
+            } else if (urlParam == "missing_fields") {
+                $('#message').text("Missing fields")
+                $('#signupAlert').show();
+                $('#message').css("color", "red")
+			}
+
+			
+			
+			
+			
+		
+			
+        </script>
+	</body>
+</html>

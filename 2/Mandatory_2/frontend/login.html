@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+		<meta charset="utf-8">
+		<title>Login</title>
+		<style>
+
+		body{
+			background-image: linear-gradient(to right, rgb(255, 155, 97) , rgb(255, 73, 158));
+		}
+		.login-form {
+			width: 300px;
+			margin: 0 auto;
+			font-family: Tahoma, Geneva, sans-serif;
+		}
+		.login-form h1 {
+			font-family: 'Montserrat';
+			text-align: center;
+			color: #4d4d4d;
+			font-size: 24px;
+			padding: 20px 0 20px 0;
+		}
+
+		.login-form img{
+			height: 100px;
+			text-align: center;
+			padding-left: 100px;
+			transition: 0.3s;
+
+		}
+		.login-form img:hover{
+			text-align: center;
+			padding-left: 75px;
+			height: 150px;
+		}
+		.login-form input[type="password"],
+		.login-form input[type="text"] {
+			font-family: 'Montserrat';
+			width: 100%;
+			padding: 15px;
+			border: 1px solid #dddddd;
+			margin-bottom: 15px;
+			box-sizing:border-box;
+		}
+		.login-form button[type="submit"] {
+			
+			width: 100%;
+			padding: 15px;
+			background-color: #535b63;
+			border: 0;
+			box-sizing: border-box;
+			cursor: pointer;
+			font-weight: bold;
+			color: #ffffff;
+			border-radius: 6px;
+			transition: 0.3s;
+		}
+
+
+
+		.login-form button[type="submit"]:hover {
+			background-color: rgb(243, 105, 26);
+		}
+
+		.signup {
+			margin-top: 10px;
+			width: 100%;
+			padding: 15px;
+			background-color: #535b63;
+			border: 0;
+			box-sizing: border-box;
+			cursor: pointer;
+			font-weight: bold;
+			color: #ffffff;
+			border-radius: 6px;
+			transition: 0.3s;
+		}
+
+		
+
+		.signup:hover {
+			background-color: rgb(226, 64, 164);
+		}
+
+
+        #loginAlert{
+            color: rgb(121, 0, 0);
+			font-family: 'Montserrat';
+        }
+
+		.required::-webkit-input-placeholder {
+    		color: red
+		}
+
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="login-form">
+			<img src="/images/logo.png" alt="" >
+			<h1>Login</h1>
+			<form action="/login" method="POST">
+				<input  id="username" type="text" name="username" placeholder="Username" required>
+				<input  id="password" type="password" name="password" placeholder="Password" required>
+				<button type="submit">Login</button> 
+				<button class="signup" onclick="location.href = '/signup';">Signup</button>
+
+				<a id="reset" href="/resetPassword" hidden>forgot password?</a>
+
+                <div class="alert alert-success" role="alert" id="loginAlert">
+                    <p id="message" style="text-align: center;"></p>
+				</div>
+				
+			</form>
+        </div>
+        
+        <script>
+            $('#loginAlert').hide();
+            const urlParams = new URLSearchParams(window.location.search);
+            const urlParam = urlParams.get('error');
+            if(urlParam == "wrong_uop") {
+				$('#message').text("Incorrect Username or Password");
+				$('#username').addClass('required');
+				$('#password').addClass('required');
+				$('#loginAlert').show();
+				$('#reset').show();
+            } else if (urlParam == "unauthorized") {
+				$('#message').text("You must login to access the Application")
+				$('#loginAlert').show();
+			}
+        </script>
+	</body>
+</html>
