@@ -1,0 +1,49 @@
+Relational Database (SQL) vs NoSQL
+
+(Relational)        (NoSQL Databases)
+MySQL               MongoDB
+MariaDB             DynamoDB
+OracleDB            Firebase
+PostgreSQL          Realm
+MSSQL
+CouchDB
+
+Explanation: We can create foreign keys between tables and that create relations..
+
+// MongoDB
+
+collections: furniture
+[
+    {
+        "key": "value"
+    },
+    {
+        "price": 20.00
+    },
+    {
+
+    }
+]
+
+// MongoDB usecases
+
+Do use:
+
+- Not sure about schema yet
+    - Leads to rapid prototyping
+        - Type of companies: start-ups
+
+Don't use:
+
+- Data that is consistent or relational
+
+- Data that is crucial, you have to be careful
+
+- If you have a set schema
+
+More info:
+    MongoDB you handle relations, data validation etc. in the application layer
+    For relational database you can also do it in the application layer 
+                    but the database is another safety net
+
+
