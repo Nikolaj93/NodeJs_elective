@@ -4,6 +4,7 @@ const mongo = require("mongodb").MongoClient;
 
 // Connection URL
 const connectionUrl = "mongodb://localhost:27017";
+const dbName = "buildings"
 
 MongoClient.connect(connectionUrl, { useUnifiedTopology: true }, (error, client) => {
     if (error) {
@@ -18,5 +19,3 @@ MongoClient.connect(connectionUrl, { useUnifiedTopology: true }, (error, client)
         client.close();
     });
 });
-
-//næste video 17. april
