@@ -8,7 +8,7 @@ app.use(express.static('frontend'));
 
 const session = require('express-session');
 app.use(session({
-    secret: require('./config/mysqlCredentials.js').development.session, //sessionSecret?
+    secret: require('./config/sessionCredentials.js').development.session, //sessionSecret?
     resave: false,
     saveUninitialized: true
 }));
