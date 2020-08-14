@@ -39,7 +39,7 @@ const adminPage = fs.readFileSync(__dirname + "/frontend/frontpages/homeAdmin.ht
 const userPage = fs.readFileSync(__dirname + "/frontend/frontpages/homeUser.html", "utf8");
 
 //Content pages
-const noAccess = fs.readFileSync(__dirname + "/frontend/contentPages/noacces.html", "utf8");
+const noAccess = fs.readFileSync(__dirname + "/frontend/contentPages/noaccess.html", "utf8");
 const secretPage = fs.readFileSync(__dirname + "/frontend/contentPages/secret.html", "utf8");
 
 // Add routes
@@ -85,6 +85,9 @@ app.get("/home", (req, res) => {
         res.redirect('/login?error=' + encodeURIComponent('unauthorized'));
     }
     
+});
+
+app.get("/noacces", (req, res) => {
 });
 
 app.get("/secret", (req, res) => {

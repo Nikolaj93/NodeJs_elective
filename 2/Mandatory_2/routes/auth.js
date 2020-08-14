@@ -57,8 +57,7 @@ route.post("/signup", async (req, res) => {
         return res.status(400).send({ response: "Passwords do not match. Fields: password and passwordRepeat" });
     } else {
         return res.status(404).send({ response: "Missing fields: username, password, passwordRepeat" });
-    }
-    
+    } 
 });
 
 route.get("/logout", (req, res) => {
