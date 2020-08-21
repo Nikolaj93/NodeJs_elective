@@ -21,13 +21,11 @@
 			font-size: 24px;
 			padding: 20px 0 20px 0;
 		}
-
 		.login-form img{
 			height: 100px;
 			text-align: center;
 			padding-left: 100px;
 			transition: 0.3s;
-
 		}
 		.login-form img:hover{
 			text-align: center;
@@ -44,7 +42,6 @@
 			box-sizing:border-box;
 		}
 		.login-form button[type="submit"] {
-			
 			width: 100%;
 			padding: 15px;
 			background-color: #535b63;
@@ -56,13 +53,9 @@
 			border-radius: 6px;
 			transition: 0.3s;
 		}
-
-
-
 		.login-form button[type="submit"]:hover {
 			background-color: rgb(243, 105, 26);
 		}
-
 		.signup {
 			margin-top: 10px;
 			width: 100%;
@@ -76,24 +69,17 @@
 			border-radius: 6px;
 			transition: 0.3s;
 		}
-
-		
-
 		.signup:hover {
 			background-color: rgb(226, 64, 164);
 		}
-
-
         #resetAlert{
             color: rgb(121, 0, 0);
 			font-family: 'Montserrat';
         }
-
 		.required::-webkit-input-placeholder {
     		color: red
 		}
-
-        </style>
+		</style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	</head>
 	<body>
@@ -160,7 +146,7 @@
 			} else if (urlParam == "no_user") {
                 $('#message').text("The user night not exist ")
                 $('#resetAlert').show();
-                $('#message').css("color", "red")
+				$('#message').css("color", "red")
 			}
         </script>
 	</body>

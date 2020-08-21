@@ -103,7 +103,6 @@ route.post("/login", async (req, res) => {
             }
         });
     } catch (error) {
-        
         res.redirect('/login?error=' + encodeURIComponent('wrong_uop'));
     }
 });
@@ -135,15 +134,13 @@ route.post('/resetPassword', async (req, res) => {
                 } else {
                     res.redirect('/resetPassword?error=' + encodeURIComponent('no_user'));
                 }
-                
-                
+                     
             } catch (error) {
                 console.log(error);
                 res.redirect('/resetPassword?error=' + encodeURIComponent('datab_error'));
             }
-    
         }
-        
+         
     } else if (password && repeatPassword && !isPasswordTheSame) {
         res.redirect('/resetPassword?error=' + encodeURIComponent('mismatch_password'));
     } else {
@@ -159,8 +156,6 @@ route.get('/logout', (req, res) => {
         res.redirect('/login');
     });
 });
-
-
 
 route.post('/signup', async (req, res) => {
     //const users = await  User.query().select();
@@ -190,7 +185,6 @@ route.post('/signup', async (req, res) => {
                 console.log(error);
                 return res.status(500).send({ response: "Something went wrong with the database" });
             }
-    
         }
         
     } else if (password && repeatPassword && !isPasswordTheSame) {
@@ -209,8 +203,6 @@ route.get('/logout', (req, res) => {
     });
 });
 
-
-
 //Nodemailer
 const transporter = nodemailer.createTransport({
     service: "gmail",
@@ -224,15 +216,15 @@ function sendConfirmation(name, password, email){
     const mailOptions = {
       from: credentials.development.email,
       to: email,
-      subject: 'Confirmation - Lion Portal',
-      text: 'Welcome ' + name + ' to lions portal!'
+      subject: 'Confirmation - Private Bank',
+      text: 'Welcome ' + name + ' to Private Bank!'
     }
   
     transporter.sendMail(mailOptions, function(error, info){
       if (error) {
         console.log(error);
       } else {
-        console.log('Email is sendt.');
+        console.log('Email is sent.');
       }
     });
   };

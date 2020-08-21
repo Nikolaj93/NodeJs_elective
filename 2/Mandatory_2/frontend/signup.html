@@ -28,21 +28,17 @@
 			margin-bottom: 15px;
 			box-sizing:border-box;
 		}
-
 		.login-form img{
 			height: 100px;
 			text-align: center;
 			padding-left: 100px;
 			transition: 0.3s;
-
 		}
 		.login-form img:hover{
 			text-align: center;
 			padding-left: 75px;
 			height: 150px;
 		}
-
-		
 		.login-form #role-selector {
 			font-size: 1.2em;
 			width: 100%;
@@ -51,8 +47,6 @@
 			margin-bottom: 15px;
 			box-sizing:border-box;
 		}
-
-		
 		.login-form button[type="submit"] {
 			width: 100%;
 			padding: 15px;
@@ -64,16 +58,13 @@
 			color: #ffffff;
 			transition: 0.3s;
 		}
-
 		.login-form button:hover[type="submit"] {
 			background-color: rgb(250, 143, 56);
 			font-size: 0.9em;
 		}
-
         #signupAlert{
             color: green;
         }
-
         </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	</head>
@@ -114,32 +105,28 @@
 				$('#message').text("User has been created!");
 				
 				setTimeout(function(){ window.location.replace("/login"); }, 4000);
+				$('#signupAlert').show();
 				
-                $('#signupAlert').show();
             } else if (urlParam == "missing_requirements") {
                 $('#message').text("Password must be more than 8 characters long")
                 $('#signupAlert').show();
-                $('#message').css("color", "red")
+				$('#message').css("color", "red")
+				
             } else if (urlParam == "user_exists") {
                 $('#message').text("A user with that username already exists")
                 $('#signupAlert').show();
-                $('#message').css("color", "red")
+				$('#message').css("color", "red")
+				
             } else if (urlParam == "mismatch_password") {
                 $('#message').text("Password and repeat password does not match")
                 $('#signupAlert').show();
-                $('#message').css("color", "red")
+				$('#message').css("color", "red")
+				
             } else if (urlParam == "missing_fields") {
                 $('#message').text("Missing fields")
                 $('#signupAlert').show();
-                $('#message').css("color", "red")
+				$('#message').css("color", "red")
 			}
-
-			
-			
-			
-			
-		
-			
         </script>
 	</body>
 </html>

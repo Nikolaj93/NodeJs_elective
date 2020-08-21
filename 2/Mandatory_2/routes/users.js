@@ -31,13 +31,11 @@ router.get('/users', async (req, res) => {
     } else {
         return res.send({response: 'Unauthorized data request'})
     }
-    
 });
 
 router.get('/currentUser', async (req, res) => {
     const user = req.session.username
     return res.send(user);
 });
-
 
 module.exports = router;
