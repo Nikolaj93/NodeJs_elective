@@ -1,0 +1,19 @@
+{
+  "name": "8._sockets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nikolaj",
+  "license": "ISC",
+  "dependencies": {
+    "escape-html": "^1.0.3",
+    "express": "^4.17.1",
+    "helmet": "^4.1.0",
+    "http": "0.0.1-security",
+    "nodemon": "^2.0.4",
+    "socket.io": "^2.3.0"
+  }
+}
