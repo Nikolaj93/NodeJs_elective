@@ -22,15 +22,12 @@
 			padding: 20px 0 20px 0;
 		}
 		.login-form img{
-			height: 100px;
-			text-align: center;
-			padding-left: 100px;
+			height: 150px;
 			transition: 0.3s;
-
 		}
 		.login-form img:hover{
 			text-align: center;
-			padding-left: 75px;
+			padding-left: 15px;
 			height: 150px;
 		}
 		.login-form input[type="password"],
@@ -43,7 +40,6 @@
 			box-sizing:border-box;
 		}
 		.login-form button[type="submit"] {
-			
 			width: 100%;
 			padding: 15px;
 			background-color: #535b63;
@@ -88,8 +84,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	</head>
 	<body>
+		<img src="/images/nodejs.png" alt="">
 		<div class="login-form">
-			<img src="/images/logo.png" alt="" >
 			<h1>Login</h1>
 			<form action="/login" method="POST">
 				<input  id="username" type="text" name="username" placeholder="Username" required>

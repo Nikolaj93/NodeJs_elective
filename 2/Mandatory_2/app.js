@@ -160,7 +160,7 @@ const adminPage = fs.readFileSync(__dirname + "/frontend/frontpages/homeAdmin.ht
 const userPage = fs.readFileSync(__dirname + "/frontend/frontpages/homeUser.html", "utf8");
 const anonymousPage = fs.readFileSync(__dirname + "/frontend/frontpages/homeAnonymous.html", "utf8");
 //Content pages
-const noAccess = fs.readFileSync(__dirname + "/frontend/contentPages/noAcces.html", "utf8");
+const noAccess = fs.readFileSync(__dirname + "/frontend/contentPages/noAccess.html", "utf8");
 const secretPage = fs.readFileSync(__dirname + "/frontend/contentPages/secret.html", "utf8");
 
 //In order to use the routes 

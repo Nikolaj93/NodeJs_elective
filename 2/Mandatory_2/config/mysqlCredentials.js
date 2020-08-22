@@ -1,19 +1,18 @@
+/*
 module.exports = {
     database: 'mandatory2',
     user:     'root',
     password: 'Nikolaj1234',
 };
-
-/*
-const credentials = require("./config/mysqlCredentials.js");
+*/
 
 module.exports = {
     development: {
-        client: 'myysql',
+        client: 'mysql',
         connection: {
           database: 'mandatory2',
-          user: 'root', 
+          user: 'Nikolaj', 
           password: 'Nikolaj1234'
         }
       }
-};*/
+};
