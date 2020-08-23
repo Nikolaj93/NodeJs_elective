@@ -1,5 +1,6 @@
 mailCredentials.js
 mysqlCredentials.js
+testConfig.js
 
 # Logs
 logs
