@@ -216,15 +216,15 @@ function sendConfirmation(name, password, email){
     const mailOptions = {
       from: credentials.development.email,
       to: email,
-      subject: 'Confirmation - Private Bank',
-      text: 'Welcome ' + name + ' to Private Bank!'
+      subject: 'Confirmation - Mandatory 2',
+      text: 'Welcome ' + name + ' to Mandatory2 assignment!'
     }
   
     transporter.sendMail(mailOptions, function(error, info){
       if (error) {
         console.log(error);
       } else {
-        console.log('Email is sent.');
+        console.log('Email has been sent.');
       }
     });
   };

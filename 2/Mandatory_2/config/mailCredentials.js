@@ -1,6 +1,6 @@
 module.exports = {
     development: {
-        passwordMail: 'test',
-        email: 'test'
+        passwordMail: 'Nodejs2020spring',
+        email: 'nodejs.exam@gmail.com'
       }
 };
