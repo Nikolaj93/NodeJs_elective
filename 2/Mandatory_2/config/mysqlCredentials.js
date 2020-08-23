@@ -1,11 +1,3 @@
-/*
-module.exports = {
-    database: 'mandatory2',
-    user:     'root',
-    password: 'Nikolaj1234',
-};
-*/
-
 module.exports = {
     development: {
         client: 'mysql',
