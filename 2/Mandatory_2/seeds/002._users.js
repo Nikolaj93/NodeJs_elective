@@ -22,8 +22,8 @@ return knex('roles').select().then(roles => {
     console.log(roles.find(role => role.role === 'ADMIN'));
     return knex('users').insert([ {
       username: 'Nikolaj',
-      password: '1234',
-      age: 26,
+      password: 'test12345678',
+      age: 27,
       email: 'testmail@test.com',
       role_id: 0
       */
